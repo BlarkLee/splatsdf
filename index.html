@@ -152,6 +152,25 @@
     <!--/ Abstract. -->
 
     <center>
+        <h2 class="title is-2">Overview</h2>
+        <div class="content has-text-justified">
+            <div class="content has-text-justified">
+                <p>
+                    We focus on three modules - Dynamic GS (a) Segmentation & Flow, (b) Management and (c) Tracking & Prediction. 
+                    DynaGSLAM takes RGBD sequence as input to construct map with GS, (a) segment dynamic GS from static GS in 3D, 
+                    and estimate dynamic GS 3D motion flow between frames. (b) Dynamic GS are managed separately from static GS 
+                    with GS flow, but combined to jointly optimize. Case 1&2 are the rules for dynamic GS adding; "Cond. 1&2" denotes 
+                    the conditions for dynamic GS deletion. (c) The optimized dynamic GS at current and past frames are used to 
+                    interpolate/extrapolate dynamic GS in the continuous timeline from past to future. "CHS" refers to "cubic 
+                    Hermite spline" and "LF" refers to "linear function". Please refer to the paper for details.
+                </p>
+              </div>
+              <div class="b-dics" style="float: center">
+                <img id="overview" src="./pipeline.png", class="img-spacing">
+              </div>
+          </div>
+    
+    <center>
       <h2 class="title is-3">Results</h2>
       <h2 class="subtitle is-4"> Scene </h2>
       <ul class="nav nav-pills nav-justified" id="scene-result-view-ul" style="width: 60%">
