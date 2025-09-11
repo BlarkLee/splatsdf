@@ -34,6 +34,17 @@
   <script src="./static/js/video_comparison.js"></script>
   <link rel="stylesheet" href="./static/css/dics.min.css">
   <script src="./static/js/dics.min.js"></script>
+
+  <!-- MathJax (LaTeX in HTML) -->
+  <script>
+  window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], processEscapes: true },
+    svg: { fontCache: 'global' }
+  };
+  </script>
+  <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  
   <script>
       document.addEventListener('DOMContentLoaded', domReady);
       function domReady() {
