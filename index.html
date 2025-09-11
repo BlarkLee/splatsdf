@@ -156,12 +156,19 @@
         <div class="content has-text-justified">
             <div class="content has-text-justified">
                 <p>
-                  Our SplatSDF takes posed RGB images and 3DGS to train an SDF-NeRF. We use 3DGS-rendered depths to identify the anchor point and shift the closest query point to the anchor point. 
-                  With a shared hash encoder, we extract query-point SDF embeddings $e_{sdf}$ and 3DGS embeddings $e_{gs}$. Our method applies a 3DGS aggregator to merge the 3DGS attributes: mean $\mu$, 
-                  covariance $\Sigma$, color $c$, and spherical harmonics $SH$. We propose a novel \emph{surface 3DGS fusion} to fuse $e_{gs}$ and $e_{sdf}$ only around the anchor point and regress to SDF. 
-                  With a density function, SDF is converted to per-point density $\sigma(x)$. We take the geometric features $g(x)$, the surface normal from SDF $n(x)$, 
-                  the query-point coordinates $x$ and the viewing angle $v$ to estimate per-point color $c(x)$ and obtain the per-pixel color $\hat{C}$ by volumetric rendering to supervise with input images. 
-                  Our core design is in the the \emph{3DGS aggregator} and the \emph{3DGS fusion}.
+                   Our SplatSDF takes posed RGB images and 3DGS to train an SDF-NeRF. We use
+    3DGS-rendered depths to identify the anchor point and shift the closest query
+    point to the anchor point. With a shared hash encoder, we extract query-point
+    SDF embeddings \(e_{sdf}\) and 3DGS embeddings \(e_{gs}\). Our method applies
+    a 3DGS aggregator to merge the 3DGS attributes: mean \(\mu\), covariance
+    \(\Sigma\), color \(c\), and spherical harmonics \(SH\). We propose a novel
+    <em>surface 3DGS fusion</em> to fuse \(e_{gs}\) and \(e_{sdf}\) only around
+    the anchor point and regress to SDF. With a density function, SDF is converted
+    to per-point density \(\sigma(x)\). We take the geometric features \(g(x)\),
+    the surface normal from SDF \(n(x)\), the query-point coordinates \(x\) and
+    the viewing angle \(v\) to estimate per-point color \(c(x)\) and obtain the
+    per-pixel color \(\hat{C}\) by volumetric rendering to supervise with input
+    images.
                 </p>
               </div>
               <div class="b-dics" style="float: center">
